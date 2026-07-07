@@ -418,7 +418,7 @@ ul{list-style:none}
   display:flex;align-items:center;justify-content:center;gap:12px;
   max-width:520px;margin:0 auto;
   background:linear-gradient(135deg,var(--gold),var(--gold-3));
-  color:#3a1a00;font-weight:800;font-size:16px;letter-spacing:1px;
+  color:#3a1a00;font-weight:800;font-size:15px;letter-spacing:1px;
   padding:20px 40px;border-radius:999px;
   box-shadow:0 10px 30px rgba(247,201,72,.5);
   animation:pulse 2s ease-in-out infinite;
