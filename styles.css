@@ -194,7 +194,7 @@ ul{list-style:none}
   background:linear-gradient(135deg,var(--gold),var(--gold-3));
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.hero-sub{font-size:17px;color:#d4c7ff;margin-bottom:28px;line-height:1.8}
+.hero-sub{font-size:18px;color:#d4c7ff;margin-bottom:28px;line-height:1.8}
 .hero-sub b{color:var(--gold)}
 .hero-sub .hl-line{color:var(--gold);font-weight:700}
 .press-intro .press-desc b{color:var(--gold);font-weight:700}
@@ -434,7 +434,7 @@ ul{list-style:none}
 }
 .product-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:36px;flex-wrap:wrap}
 .tab{
-  padding:10px 22px;border-radius:999px;font-size:13px;font-weight:600;
+  padding:10px 22px;border-radius:999px;font-size:16px;font-weight:600;
   background:rgba(255,255,255,.06);color:#d4c7ff;border:1px solid rgba(255,255,255,.1);
   transition:.2s;
 }
