@@ -737,7 +737,7 @@ ul{list-style:none}
   .hero-inner{grid-template-columns:1fr}
   .hero-title{font-size:32px}
   .section{padding:60px 0}
-  .section-title{font-size:27px}
+  .section-title{font-size:26px}
   .press-grid-v2,.benefits,.benefits-grid,.product-grid,.steps-grid,.footer-grid,.kpi-strip,.promise-bar{grid-template-columns:1fr}
   .register-wrap{grid-template-columns:1fr;padding:30px;gap:30px}
   .hero-card{padding:20px}
