@@ -30,3 +30,24 @@ document.querySelectorAll('.bcard, .step-card, .product, .press-card-v2, .kpi, .
   el.style.transition = 'opacity .6s ease, transform .6s ease';
   io.observe(el);
 });
+// Lấy phần tử nút bấm theo ID
+const backToTopBtn = document.getElementById("backToTop");
+
+// Lắng nghe sự kiện cuộn chuột của người dùng
+window.onscroll = function() {
+  // Nếu cuộn xuống quá 300px thì thêm class .show để hiện nút, ngược lại thì ẩn đi
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+};
+
+// Xử lý sự kiện khi người dùng click vào nút
+backToTopBtn.addEventListener("click", function() {
+  // Cuộn mượt mà lên đầu trang
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

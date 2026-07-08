@@ -271,9 +271,17 @@ ul{list-style:none}
 .section-head{margin-bottom:44px}
 .section-head.center{text-align:center}
 .section-num{
-  display:inline-block;font-size:14px;font-weight:800;color:var(--gold);
-  background:rgba(247,201,72,.12);padding:6px 14px;border-radius:999px;
+  font-size:28px;font-weight:800;color:var(--gold);
+  display: inline-flex !important; 
+  background:rgba(247,201,72,.12);padding:6px 10px;border-radius:999px;
   border:1px solid rgba(247,201,72,.3);letter-spacing:2px;margin-bottom:14px;
+  width: auto !important; /* Xóa bỏ chiều rộng 100% cũ */
+  min-width: 60px !important; /* Đảm bảo nền có độ rộng tối thiểu để tạo hình tròn/bầu dục đẹp */
+  height: 45px !important; /* Chiều cao của khối nền */
+  padding: 0 15px !important; /* Khoảng cách đệm 2 bên số 01 */
+
+  border-radius: 30px !important;
+  margin: 0 auto 15px auto !important;
 }
 .section-title{font-size:30px;font-weight:800;line-height:1.2;letter-spacing:.5px}
 .section-desc{margin-top:14px;color:#d4c7ff;font-size:17px}
@@ -849,4 +857,52 @@ ul{list-style:none}
   .form-container select {
     font-size: 16px !important;
   }
+  
+}
+@media (max-width: 767px) {
+  .section-head {
+    text-align: center !important; /* Căn giữa toàn bộ nội dung bên trong khối đầu mục */
+  }
+  
+  .section-num {
+    display: block !important; /* Ép số 01 thành một dòng riêng biệt để tự động căn giữa */
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+#backToTop {
+  position: fixed;
+  bottom: 100px; /* Khoảng cách từ đáy màn hình */
+  right: 20px;  /* Khoảng cách từ cạnh phải màn hình */
+  z-index: 99;  /* Đảm bảo nút luôn nằm trên cùng các phần tử khác */
+  border: none;
+  outline: none;
+  background-color: #ff0000; /* Màu nền đỏ (hoặc anh đổi theo màu tím/vàng thương hiệu) */
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Tạo nút hình tròn */
+  font-size: 18px;
+  transition: all 0.3s ease;
+  
+  /* Mặc định sẽ ẩn nút đi, khi cuộn xuống mới hiện */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+#backToTop:hover {
+  background-color: #cc0000;
+  transform: translateY(-3px);
+}
+
+/* Lớp class này sẽ được tự động thêm vào bằng JS khi cuộn màn hình xuống */
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
