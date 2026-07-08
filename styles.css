@@ -870,6 +870,33 @@ ul{list-style:none}
     margin-left: auto !important;
     margin-right: auto !important;
   }
+  .section-num {
+  display: inline-flex !important; /* Chuyển sang inline-flex để nền tự động thu hẹp theo chữ */
+  align-items: center;
+  justify-content: center;
+  
+  /* 1. Phóng to chữ số 01 */
+  font-size: 28px !important; /* Anh có thể tăng/giảm số này tùy ý thích */
+  font-weight: 700 !important;
+  
+  /* 2. Thu gọn nền (dùng padding để căn khoảng cách rìa nền to hơn chữ một chút) */
+  width: auto !important; /* Xóa bỏ chiều rộng 100% cũ */
+  min-width: 60px !important; /* Đảm bảo nền có độ rộng tối thiểu để tạo hình tròn/bầu dục đẹp */
+  height: 45px !important; /* Chiều cao của khối nền */
+  padding: 0 15px !important; /* Khoảng cách đệm 2 bên số 01 */
+  
+  /* 3. Giữ nguyên bo tròn và căn giữa khối trên màn hình */
+  border-radius: 30px !important;
+  margin: 0 auto 15px auto !important; /* Căn giữa toàn bộ khối nền trên giao diện */
+}
+
+/* Đảm bảo khung cha cho phép phần tử con căn giữa chính xác */
+.section-head {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
 }
 #backToTop {
   position: fixed;
